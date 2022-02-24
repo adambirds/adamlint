@@ -13,3 +13,9 @@ dist/
 # miscellaneous
 .vscode/*
 .DS_Store
+
+# venv
+
+venv/
+env/
+virtualenv/
