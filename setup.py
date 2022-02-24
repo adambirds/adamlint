@@ -13,20 +13,19 @@ def long_description() -> str:
         return f.read()
 
 setup(
-    name='zulint',
+    name='adamlint',
     version=VERSION,
-    author='Zulip Open Source Project',
+    author='ADB Web Designs',
     description='A linter launcher for projects that have multiple source languages.',
     long_description=long_description(),
     long_description_content_type='text/markdown',
-    author_email='zulip-devel@googlegroups.com',
+    author_email='enquiries@adbwebdesigns.co.uk',
     python_requires='>=3.5',
-    url='https://github.com/zulip/zulint',
+    url='https://github.com/adambirds/adamlint',
     packages=find_packages(exclude=('tests',)),
     package_data={
         'zulint': ["py.typed"],
     },
-    setup_requires=['wheel'],
     install_requires=REQUIRED,
     license='Apache License 2.0',
     classifiers=[
@@ -40,6 +39,7 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy'
     ],

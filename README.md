@@ -1,6 +1,6 @@
 # zulint
 
-![CI](https://github.com/zulip/zulint/workflows/CI/badge.svg)
+![CI](https://github.com/adambirds/adamlint/workflows/CI/badge.svg)
 
 zulint is a lightweight linting framework designed for complex
 applications using a mix of third-party linters and custom rules.
@@ -55,7 +55,7 @@ to be beta and may change (with notice in the release notes) if we
 discover a better API, and patches to further extend it for more use
 cases are encouraged.
 
-## Using zulint
+## Using adamlint
 
 Once a project is setup with zulint, you'll have a top-level linter
 script with at least the following options:
@@ -111,8 +111,8 @@ TODO: Document all the features of the `RuleList` and `custom_check` system.
 
 Run the following commands in a terminal to install zulint.
 ```
-git clone git@github.com:zulip/zulint.git
-python3 -m venv zulint_env
-source zulint_env/bin/activate
+git clone git@github.com:adambirds/adamlint.git
+python3 -m venv adamlint_env
+source adamlint_env/bin/activate
 python3 setup.py install
 ```
