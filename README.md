@@ -5,7 +5,7 @@
 zulint is a lightweight linting framework designed for complex
 applications using a mix of third-party linters and custom rules.
 
-This project requires Python 3.10 or newer.
+This project requires Python 3.10 or newer. Our CI tests run on Python 3.10–3.13 and the upcoming Python 3.14 pre-release.
 
 ## Why zulint
 
