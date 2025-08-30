@@ -1,7 +1,7 @@
 import argparse
 import signal
 import subprocess
-from typing import Callable, Sequence, Tuple
+from typing import Callable, Optional, Sequence, Tuple
 
 from zulint.printer import colors, print_err
 
@@ -11,12 +11,14 @@ def run_command(
     color: str,
     command: Sequence[str],
     suppress_line: Callable[[str], bool] = lambda line: False,
+    cwd: Optional[str] = None,
 ) -> int:
     with subprocess.Popen(
         command,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         universal_newlines=True,
+        cwd=cwd,
     ) as p:
         assert p.stdout is not None
         for line in iter(p.stdout.readline, ""):

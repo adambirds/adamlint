@@ -26,8 +26,9 @@ It has the following features:
 - Runs the linters in parallel, so you only have to wait for the
   slowest linter.  For Zulip, this is a ~4x performance improvement
   over running our third-party linters in series.
-- Produduces easy-to-read, clear terminal output, with each
-  independent linter given its own color.
+ - Produduces easy-to-read, clear terminal output, with each
+   independent linter given its own color from a palette including
+   orange, pink, and more.
 - Can check just modified files, or even as a `pre-commit` hook, only
   checking files that have changed (and only starting linters which
   check files that have changed).
@@ -85,6 +86,13 @@ optional arguments:
   --verbose, -v         Print verbose output where available
   --fix                 Automatically fix problems where supported
 ```
+
+### External linters in subdirectories
+
+When registering an external linter with `linter_config.external_linter`, you
+can now pass a `cwd` argument to run the linter in a different working
+directory.  This is helpful in monorepos where individual projects maintain
+their own configuration files.
 
 ### pre-commit hook mode
 
