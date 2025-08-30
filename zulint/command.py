@@ -149,7 +149,7 @@ class LinterConfig:
         such files, exits without doing anything.
 
         If target_langs is empty, just runs the linter unconditionally.
-        
+
         `cwd` specifies the working directory in which to execute the linter;
         if not provided, the current working directory is used.
         """
