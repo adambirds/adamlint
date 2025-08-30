@@ -20,7 +20,7 @@ setup(
     long_description=long_description(),
     long_description_content_type='text/markdown',
     author_email='enquiries@adbwebdesigns.co.uk',
-    python_requires='>=3.5',
+    python_requires='>=3.10',
     url='https://github.com/adambirds/adamlint',
     packages=find_packages(exclude=('tests',)),
     package_data={
@@ -38,8 +38,9 @@ setup(
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy'
     ],
