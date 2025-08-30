@@ -3,7 +3,18 @@ import logging
 import multiprocessing
 import sys
 import weakref
-from typing import Callable, Dict, List, Mapping, NoReturn, Optional, Sequence, Set, Tuple, Union
+from typing import (
+    Callable,
+    Dict,
+    List,
+    Mapping,
+    NoReturn,
+    Optional,
+    Sequence,
+    Set,
+    Tuple,
+    Union,
+)
 
 from zulint import lister
 from zulint.linters import run_command
