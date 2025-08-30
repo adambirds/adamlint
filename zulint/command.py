@@ -3,7 +3,7 @@ import logging
 import multiprocessing
 import sys
 import weakref
-from typing import Callable, Dict, List, Mapping, NoReturn, Sequence, Set, Tuple, Union
+from typing import Callable, Dict, List, Mapping, NoReturn, Optional, Sequence, Set, Tuple, Union
 
 from zulint import lister
 from zulint.linters import run_command
@@ -130,6 +130,7 @@ class LinterConfig:
         description: str = "External Linter",
         check_arg: Union[str, Sequence[str]] = [],
         suppress_line: Callable[[str], bool] = lambda line: False,
+        cwd: Optional[str] = None,
     ) -> None:
         """Registers an external linter program to be run as part of the
         linter.  This program will be passed the subset of files being
@@ -137,6 +138,9 @@ class LinterConfig:
         such files, exits without doing anything.
 
         If target_langs is empty, just runs the linter unconditionally.
+        
+        `cwd` specifies the working directory in which to execute the linter;
+        if not provided, the current working directory is used.
         """
         self.lint_descriptions[name] = description
         if fix_arg or check_arg:
@@ -161,7 +165,7 @@ class LinterConfig:
             if pass_targets:
                 full_command += targets
 
-            return run_command(name, color, full_command, suppress_line)
+            return run_command(name, color, full_command, suppress_line, cwd)
 
         self.lint_functions[name] = run_linter
 
